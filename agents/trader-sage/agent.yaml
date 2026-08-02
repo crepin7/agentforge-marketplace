@@ -1,0 +1,21 @@
+name: trader-sage
+description: Signaux de trading IA multi-actifs
+version: 0.1.0
+author: crepin7
+tags: [finance, trading, crypto, forex]
+pricing:
+  model: subscription
+  price_cents: 4900
+tier: premium
+inputs:
+  - name: asset
+    type: string
+  - name: horizon
+    type: string
+outputs:
+  - name: signal
+    type: string
+  - name: confidence
+    type: number
+  - name: reasoning
+    type: string
