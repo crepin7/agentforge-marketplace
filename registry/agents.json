@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "agents": [
+    {"slug": "trader-sage", "name": "Trader Sage", "tagline": "Signaux de trading IA multi-actifs", "version": "0.1.0", "author": "crepin7", "tags": ["finance", "trading", "crypto", "forex"], "pricing": {"model": "subscription", "price_cents": 4900}, "tier": "premium", "stats": {"calls_total": 0, "rating": 0}},
+    {"slug": "code-wizard", "name": "Code Wizard", "tagline": "Code review, refactor et generation de tests", "version": "0.1.0", "author": "crepin7", "tags": ["dev", "code-review", "testing"], "pricing": {"model": "subscription", "price_cents": 2900}, "tier": "standard", "stats": {"calls_total": 0, "rating": 0}},
+    {"slug": "growth-hacker", "name": "Growth Hacker", "tagline": "Strategies d acquisition, A/B tests, copywriting", "version": "0.1.0", "author": "crepin7", "tags": ["marketing", "growth", "copywriting"], "pricing": {"model": "subscription", "price_cents": 3900}, "tier": "standard", "stats": {"calls_total": 0, "rating": 0}},
+    {"slug": "data-analyst", "name": "Data Analyst", "tagline": "SQL auto, dashboards, insights business", "version": "0.1.0", "author": "crepin7", "tags": ["data", "analytics", "sql", "bi"], "pricing": {"model": "subscription", "price_cents": 3900}, "tier": "standard", "stats": {"calls_total": 0, "rating": 0}},
+    {"slug": "support-hero", "name": "Support Hero", "tagline": "Support client multilingue 24/7", "version": "0.1.0", "author": "crepin7", "tags": ["support", "customer-service"], "pricing": {"model": "subscription", "price_cents": 1900}, "tier": "starter", "stats": {"calls_total": 0, "rating": 0}},
+    {"slug": "legal-eagle", "name": "Legal Eagle", "tagline": "Revision de contrats, conformite RGPD", "version": "0.1.0", "author": "crepin7", "tags": ["legal", "compliance", "rgpd"], "pricing": {"model": "subscription", "price_cents": 5900}, "tier": "premium", "stats": {"calls_total": 0, "rating": 0}}
+  ]
+}

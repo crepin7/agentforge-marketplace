@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://forge:forge@db:5432/agentforge
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      - db
+      - redis
+
+  web:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_STRIPE_PK=${NEXT_PUBLIC_STRIPE_PK}
+    depends_on:
+      - api
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=forge
+      - POSTGRES_PASSWORD=forge
+      - POSTGRES_DB=agentforge
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:
